@@ -1,6 +1,5 @@
 * [简介](README.md)
 * [Gitbook](Gitbook/简介.md)
-<hr>
  * [安装](Gitbook/安装.md)
  * [使用](Gitbook/使用.md)
 * [GitHub](c1.md)
