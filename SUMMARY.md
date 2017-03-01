@@ -1,5 +1,6 @@
 * [简介](README.md)
 * [Gitbook](Gitbook/简介.md)
+<hr>
  * [安装](Gitbook/安装.md)
  * [使用](Gitbook/使用.md)
 * [GitHub](c1.md)
@@ -9,4 +10,4 @@
  * [win下MongoDB的安装与使用](MongoDB/win下MongoDB的安装与使用.md)
 * [Angular2]()
 * [Ionic2]()
- * [生命周期钩子](Ionic/生命周期钩子.md)
+ * [生命周期钩子](Ionic2/生命周期钩子.md)
