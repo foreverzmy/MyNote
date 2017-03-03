@@ -3,6 +3,7 @@
   * [安装](GitBook/安装.md)
   * [使用](GitBook/使用.md)
 * [Git](Git/README.md)
+  * [安装&配置](Git/安装&配置.md)
 * [前端基础](前端基础/README.md)
   * [HTML](前端基础/HTML/README.md)
   * [CSS](前端基础/CSS/README.md)
