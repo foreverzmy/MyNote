@@ -11,7 +11,7 @@
 * [前端进阶]()
   * [RxJs](前端进阶/RxJs/README.md)
     * [Observable](前端进阶/RxJs/Observable.md)
-* [MongoDB](MongoDB/MongoDB/README.md)
+* [MongoDB](MongoDB/README.md)
   * [win下MongoDB的安装与使用](MongoDB/win下MongoDB的安装与使用.md)
 * [Angular2]()
 * [Ionic2](Ionic2/README.md)
