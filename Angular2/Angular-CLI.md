@@ -14,7 +14,7 @@ npm install -g @angular/cli
 
 # 常用命令
 
-* 创建项目
+### 创建项目
 
 ```
 ng new my-project
@@ -22,7 +22,7 @@ ng new my-project
 
 `ng new` 会自动创建 Angular 项目并安装依赖，安装依赖时可以按住 `Ctrl+C` 来停止，然后自己科学的安装依赖。
 
-* 创建模块
+### 创建模块
 
 ```
 ng g cl MyClass
@@ -36,7 +36,7 @@ ng g s  MyService
 
 其中 `g` 是 `generate` 的缩写，后面的也都是缩写，可以通过 `ng g` 来创建这些模块，它们会被自动创建到 `src/app/` 下面的文件夹下，并且以小驼峰式创建文件夹： `src/app/my-component`
 
-* 启动项目
+### 启动项目
 
 ```
 ng serve
@@ -50,7 +50,7 @@ ng serve --prod --aot
 
 此时会自动启用 AOT ，此时启动项目就会发现加载的资源很小。
 
-* 构建项目
+### 构建项目
 
 ```
 ng build
@@ -58,7 +58,7 @@ ng build
 
 构建项目会在项目下生成一个 `dist` 的文件夹，构建后的项目就在这个文件夹里了。
 
-* 测试项目
+### 测试项目
 
 ```
 ng test
