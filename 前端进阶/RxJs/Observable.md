@@ -9,7 +9,7 @@ Observer 模式是一种设计模式，其中一个对象 (称为 subject )维�
 
 ```javascript
 document.body.addEventListener('click', function listener(e) {
-    console.log(e);
+  console.log(e);
 },false);
 
 document.body.click(); // 模拟用户点击
@@ -18,6 +18,14 @@ document.body.click(); // 模拟用户点击
 将上述例子抽象模型，并对应通用的观察者模型
 
 ![](http://static.open-open.com/lib/uploadImg/20161102/20161102101109_17.png)
+
+# Observable
+
+* Observable 用于观察数据流并在值、错误或完成时发射函数，并将这些值传入函数;
+* Observable 可以通过 Observer 来订阅;
+* Observable 会持续观察数据流并及时进行相应更新
+* 可以与数据流进行交互
+
 
 ## 创建 Observable
 
