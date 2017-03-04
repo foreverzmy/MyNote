@@ -6,8 +6,10 @@ Angular-CLI 不仅仅是一个构建 Angular 的工具，而是一个集成了�
 
 # 安装
 
+Angular-CLI 新版本已经更名为 @angular/cli
+
 ```
-npm install -g angular-cli
+npm install -g @angular/cli
 ```
 
 常用命令：
