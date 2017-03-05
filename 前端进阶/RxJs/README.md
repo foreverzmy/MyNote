@@ -11,3 +11,14 @@
 # 为什么使用 RxJs
 
 JavaScript 经常说的异步回调地狱是非常麻烦的，陷入回调地狱的代码是非常差的代码，非常容易出错并且难以读懂，使用 RxJs 就可以优雅的避开这种回调。而且 RxJs 比 Promise 更加的方便和更能强大。
+
+# RxJS 的基本概念
+
+* Observable 可观察对象：表示一个可调用的未来值或者事件的集合。
+* Observer 观察者：一个回调函数集合,它知道怎样去监听被Observable发送的值
+* Subscription 订阅： 表示一个可观察对象的执行，主要用于取消执行。
+* Operators 操作符： 纯粹的函数，使得以函数编程的方式处理集合比如:map,filter,contact,flatmap。
+* Subject (主题)：等同于一个事件驱动器，是将一个值或者事件广播到多个观察者的唯一途径。
+* Schedulers (调度者)： 用来控制并发，当计算发生的时候允许我们协调，比如 setTimeout , requestAnimationFrame
+
+[ rxjs 官方文档中文翻译](https://buctwbzs.gitbooks.io/rxjs/)
