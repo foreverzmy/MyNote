@@ -19,6 +19,7 @@
     * [安装与使用](前端进阶/TypeScript/安装与使用.md)
     * [基本数据类型](前端进阶/TypeScript/基本数据类型.md)
     * [声明和解构](前端进阶/TypeScript/声明和解构.md)
+    * [函数](前端进阶/TypeScript/函数.md)
 
 * [MongoDB](MongoDB/README.md)
   * [win下MongoDB的安装与使用](MongoDB/win下MongoDB的安装与使用.md)
