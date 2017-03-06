@@ -15,11 +15,11 @@
 * [前端进阶](前端进阶/README.md)
   * [RxJs](前端进阶/RxJs/README.md)
     * [Observable](前端进阶/RxJs/Observable.md)
-  *[TypeScript](前端进阶/TypeScript/README.md)
+  * [TypeScript](前端进阶/TypeScript/README.md)
     * [安装与使用](前端进阶/TypeScript/安装与使用.md)
     * [基本数据类型](前端进阶/TypeScript/基本数据类型.md)
     * [声明和解构](前端进阶/TypeScript/声明和解构.md)
-    
+
 * [MongoDB](MongoDB/README.md)
   * [win下MongoDB的安装与使用](MongoDB/win下MongoDB的安装与使用.md)
 
