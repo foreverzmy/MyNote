@@ -91,3 +91,69 @@ protected 修饰符与 private 修饰符的行为很相似，但有一点不同�
 
 ## 参数属性
 
+参数属性是通过给构造函数参数添加一个访问限定符( public/provate/protected )来声明。参数属性可以很方便的让我们在一个地方定义并初始化类成员：
+
+```ts
+class Animal {
+  constructor(protected name: string) {
+    this.name = name;
+  }
+}
+```
+
+在构造函数里通过 `protected name: string` 来创建和初始化 `name` 成员属性，从而把声明和赋值合并到一处。
+
+## 静态属性
+
+类的静态成员存在于类本身而不是类的实例上，类似在实例属性上使用 this 来访问属性，可使用 `ClassName.` 来访问静态属性。
+
+可以使用 `static` 关键字关键字来定义类的静态属性：
+
+```ts
+class Grid {
+  static origin = { x0: 1, y0: 3 };
+  private width: number;
+  private height: number;
+  constructor(public position: { x1: number, y1: number }) {
+    this.width = this.position.x1 - Grid.origin.x0;
+    this.height = this.position.y1 - Grid.origin.y0;
+  }
+  getArea(): void {
+    console.log(this.width * this.height);
+  }
+  getPerimeter(): void {
+    console.log((this.width + this.height) * 2)
+  }
+}
+let position = { x1: 2, y1: 5 };
+let Rectangle = new Grid(position);
+Rectangle.getArea()  // 2
+Rectangle.getPerimeter();  //6
+```
+
+## 抽象类
+
+TS 有抽象类的概念，它是供其它类继承的基类，不能直接被实例化。
+
+不同于接口，抽象类必须包含一些抽象方法，同时也可以包含非抽象的成员。 `abstract` 关键字用于定义抽象类和抽象方法。抽象类中的抽象方法不包含具体实现并且必须在派生类中实现：
+
+```ts
+abstract class Person {
+  abstract speak(): void;  // 必须在派生类中实现
+  walking() {
+    console.log('Walking on the road.')
+  }
+}
+class Male extends Person {
+  speak(): void {
+    console.log('Hello World!')
+  }
+}
+let person: Person;  // 创建一个抽象类的引用
+// person = new Person();  //error TS2511: Cannot create an instance of the abstract class 'Person'.
+person = new Male();
+person.speak();  // Hello World!
+person.walking();  // Walking on the road.
+```
+
+> 在面向对象设计中，抽象类和接口是经常讨论的话题，在 TS 中也一样。简单来说，接口更注重功能的设计，抽象类更注重解构内容的体现。
