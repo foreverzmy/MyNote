@@ -21,6 +21,7 @@
     * [声明和解构](前端进阶/TypeScript/声明和解构.md)
     * [函数](前端进阶/TypeScript/函数.md)
     * [Class](前端进阶/TypeScript/Class.md)
+    * [接口](前端进阶/TypeScript/接口.md)
     * [模块](前端进阶/TypeScript/模块.md)
 
 * [MongoDB](MongoDB/README.md)
