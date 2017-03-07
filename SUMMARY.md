@@ -34,6 +34,7 @@
 
 * [Angular2](Angular2/README.md)
   * [Angular-CLI](Angular2/Angular-CLI.md)
+  * [简单解析](Angular2/Angular2简单解析.md)
 
 * [Ionic2](Ionic2/README.md)
   * [生命周期钩子](Ionic2/生命周期钩子.md)
