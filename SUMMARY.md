@@ -18,6 +18,8 @@
   * [TypeScript](前端进阶/TypeScript/README.md)
     * [安装与使用](前端进阶/TypeScript/安装与使用.md)
     * [基本数据类型](前端进阶/TypeScript/基本数据类型.md)
+    * [高级数据类型](前端进阶/TypeScript/高级数据类型.md)
+    * [泛型](前端进阶/TypeScript/泛型.md)
     * [声明和解构](前端进阶/TypeScript/声明和解构.md)
     * [函数](前端进阶/TypeScript/函数.md)
     * [Class](前端进阶/TypeScript/Class.md)
