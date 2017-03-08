@@ -123,7 +123,7 @@ http      #http块
 
 4. server 块：配置虚拟主机的相关参数，一个 http 中可以有多个 server 。
 
-5、location 块：配置请求的路由，以及各种页面的处理情况。
+5. location 块：配置请求的路由，以及各种页面的处理情况。
 
 ### 配置命令解析
 
@@ -133,6 +133,7 @@ http      #http块
 #worker_processes auto;  # 允许生成的进程数，默认为 1
 #pid /nginx/pid/nginx.pid;   # 指定nginx进程运行文件存放地址
 error_log log/error.log debug;  # 制定日志路径，级别。这个设置可以放入全局块，http块，server块，级别以此为：debug|info|notice|warn|error|crit|alert|emerg
+
 # 工作模式及连接数上限
 events {
     accept_mutex on;   # 设置网路连接序列化，防止惊群现象发生，默认为on
@@ -142,6 +143,7 @@ events {
     # 并发总数是 worker_processes 和 worker_connections 的乘积
     multi_accept on;   # multi_accept 告诉nginx收到一个新连接通知后接受尽可能多的连接。
 }
+
 http {
     include       mime.types;   # 文件扩展名与文件类型映射表,类型由 mime.type 文件定义
     default_type  application/octet-stream;  # 默认文件类型，默认为text/plain
@@ -185,9 +187,9 @@ http {
     # client_max_body_size:设置客户端能够上传的文件大小，默认为 1m
 
     map $http_user_agent $outdated {  # 判断浏览器版本
-            default                    0;
-            "~MSIE [6-9].[0-9]"        1;
-            "~MSIE 10.0"               1;
+        default                    0;
+        "~MSIE [6-9].[0-9]"        1;
+        "~MSIE 10.0"               1;
     }
 
     # 负载均衡
@@ -300,4 +302,4 @@ http {
 7. `$http_referer`：用来记录从那个页面链接访问过来的； 
 8. `$http_user_agent`：记录客户端浏览器的相关信息；
 
-惊群现象：一个网路连接到来，多个睡眠的进程被同事叫醒，但只有一个进程能获得链接，这样会影响系统性能。
+* 惊群现象：一个网路连接到来，多个睡眠的进程被同事叫醒，但只有一个进程能获得链接，这样会影响系统性能。
