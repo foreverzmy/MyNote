@@ -26,6 +26,7 @@
     * [接口](前端进阶/TypeScript/接口.md)
     * [模块](前端进阶/TypeScript/模块.md)
     * [装饰器](前端进阶/TypeScript/装饰器.md)
+  * [Web Component](前端进阶/WebComponent/README.md)
 
 * [NodeJS](NodeJS/README.md)
 
