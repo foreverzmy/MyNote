@@ -36,7 +36,12 @@
 * [Angular2](Angular2/README.md)
   * [Angular-CLI](Angular2/Angular-CLI.md)
   * [简单解析](Angular2/简单解析.md)
-  * [组件](Angular2/组件.md)
+  * [组件](Angular2/组件/README.md)
+    * [组件元数据](Angular2/组件/组件元数据.md)
+    * [数据绑定](Angular2/组件/数据绑定.md)
+    * [组件生命周期](Angular2/组件/组件生命周期.md)
+  * [指令](Angular2/指令/指令生命周期.md)
+    * [指令生命周期](Angular/指令/指令生命周期.md)
 
 * [Ionic2](Ionic2/README.md)
   * [生命周期钩子](Ionic2/生命周期钩子.md)
