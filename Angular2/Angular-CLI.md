@@ -65,3 +65,27 @@ ng test
 ```
 
 会使用karma自动测试项目里的测试用例。
+
+## 代理设置
+
+@angular/cli 内置了代理，所以开发时不同配置反向代理就可以用，代理文件`proxy.conf.json`如下：
+
+```json
+{
+  "/api/*": {
+    "target": "http://localhost:9000/api",  // 目标地址
+    "changeOrigin": true,   // 将host的源更改为目标URL'。
+    "secure": false,    // 
+    "logLevel": "debug",  // 显示请求
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}
+```
+
+当运行项目时，使用以下命令：
+
+```
+$ ng serve --proxy-config proxy.conf.json
+```
