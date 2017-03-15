@@ -41,7 +41,9 @@
     * [数据绑定](Angular2/组件/数据绑定.md)
     * [组件生命周期](Angular2/组件/组件生命周期.md)
   * [指令](Angular2/指令/指令生命周期.md)
-    * [指令生命周期](Angular/指令/指令生命周期.md)
+    * [指令生命周期](Angular2/指令/指令生命周期.md)
+  * [路由](Angular2/路由/README.md)
+    * [路由跳转](Angular2/路由/路由跳转.md)
 
 * [Ionic2](Ionic2/README.md)
   * [生命周期钩子](Ionic2/生命周期钩子.md)
