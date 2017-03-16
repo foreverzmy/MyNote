@@ -49,6 +49,7 @@
   * [生命周期钩子](Ionic2/生命周期钩子.md)
 
 * [工具集](工具集/README.md)
+  * [DOS命令](工具集/DOS命令.md)
   * [Chrome插件](工具集/Chrome插件.md)
   * [Markdown语法](工具集/Markdown语法.md)
   * [Nginx配置与使用](工具集/Nginx配置与使用.md)
