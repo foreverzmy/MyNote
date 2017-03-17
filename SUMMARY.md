@@ -29,6 +29,7 @@
   * [Web Component](前端进阶/WebComponent/README.md)
 
 * [NodeJS](NodeJS/README.md)
+  * [Socket.io](NodeJS/Socket.io.md)
 
 * [MongoDB](MongoDB/README.md)
   * [win下MongoDB的安装与使用](MongoDB/win下MongoDB的安装与使用.md)
