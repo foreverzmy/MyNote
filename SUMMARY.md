@@ -54,3 +54,4 @@
   * [Chrome插件](工具集/Chrome插件.md)
   * [Markdown语法](工具集/Markdown语法.md)
   * [Nginx配置与使用](工具集/Nginx配置与使用.md)
+  * [Chocolatey](工具集/Chocolatey.md)
