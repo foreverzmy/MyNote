@@ -33,6 +33,10 @@
 
 * [MongoDB](MongoDB/README.md)
   * [win下MongoDB的安装与使用](MongoDB/win下MongoDB的安装与使用.md)
+  * [插入](MongoDB/插入.md)
+  * [查询](MongoDB/查询.md)
+  * [修改](MongoDB/修改.md)
+  * [删除](MongoDB/删除.md)
 
 * [Angular2](Angular2/README.md)
   * [Angular-CLI](Angular2/Angular-CLI.md)
