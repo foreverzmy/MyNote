@@ -1,6 +1,6 @@
 # What is RxJs
 
-说道 RxJx 就要说 Reactive Programming（响应式编程），RxJx 就是它的 js 版本的实现，全称是 ReactiveX ，是使用 Observable 序列来进行异步编程的库，提供一系列方法来操作 Observable。
+说道 RxJx 就要说 Reactive Programming（响应式编程），RxJx 就是它的 js 版本的实现，全称是 ReactiveX ，是使用 Observable 序列来进行异步编程的库，提供一系列方法来操作 Observable ，使异步编程或基于回调的代码更容易。
 
 # 什么是 Reactive Programming
 
