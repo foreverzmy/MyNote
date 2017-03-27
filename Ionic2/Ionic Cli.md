@@ -36,6 +36,11 @@ ionic start MyIonic2Project --v2
   * super：启动项目超过14个可以使用的页面设计
   * tutorial：指导启动项目
 
+使用方法:
+
+```npm
+ionic start MyIonic2Project tutorial --v2
+```
 
 ### 启动项目
 
