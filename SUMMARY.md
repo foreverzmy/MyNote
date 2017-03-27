@@ -15,6 +15,7 @@
 * [前端进阶](前端进阶/README.md)
   * [RxJs](前端进阶/RxJs/README.md)
     * [Observable](前端进阶/RxJs/Observable.md)
+    * [API](前端进阶/RxJs/API.md)
   * [TypeScript](前端进阶/TypeScript/README.md)
     * [安装与使用](前端进阶/TypeScript/安装与使用.md)
     * [基本数据类型](前端进阶/TypeScript/基本数据类型.md)
