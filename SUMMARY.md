@@ -52,6 +52,7 @@
     * [路由跳转](Angular2/路由/路由跳转.md)
 
 * [Ionic2](Ionic2/README.md)
+  * [Ionic Cli](Ionic2/Ionic Cli.md)
   * [生命周期钩子](Ionic2/生命周期钩子.md)
 
 * [工具集](工具集/README.md)

@@ -5,4 +5,5 @@ Ionic 基于 AngularJS 开发。由于AngularJS 1.x版本在性能上已经很�
 
 Ionic 2 专注于以标准的 HTML 、 CSS 和 JavaScript 来构建移动站点，并可以通过 Cordova 打包成移动 App，只需编写一次代码，就可以分别部署到 iOS 、Android 等多种移动平台上。这项技术已经帮助很多开发者创建了很多漂亮的 App。现在 Ionic 2 已经发布了第二代版本，使移动开发更容易、更有效率。
 
-onic 2 与一代相比有较大的变化，基于最新的 Angular 2 ，使用 TypeScript进行开发。
+ionic 2 与一代相比有较大的变化，基于最新的 Angular 2 ，使用 TypeScript进行开发。
+
