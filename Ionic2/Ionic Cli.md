@@ -26,7 +26,7 @@ ionic start MyIonic2Project --v2
 
 * 注意
 
-1. 也可以不加 `--v2`，默认就是 ionic2 版本的项目。
+1. Ionic Cli 默认是 ionic1 版本的项目，所以要加 `--v2` 才能创建 ionic2 的项目。
 
 2. 创建的项目默认会使用 [tabs](https://github.com/driftyco/ionic2-starter-tabs) 模板，如果默认模板不是您想要使用的，Ionic有几个模板可用：
 
