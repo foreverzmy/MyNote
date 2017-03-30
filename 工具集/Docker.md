@@ -32,6 +32,24 @@ docker images centos
 docker run -i -t centos /bin/bash
 ```
 
+* 后台运行容器
+
+```
+docker run -d centos ping 8.8.8.8
+```
+
+* 进入后台容器的 shell bash
+
+```
+docker exec -ti images_name /bin/bash
+```
+
+* 检查容器
+
+```
+docker ps
+```
+
 * 停止容器
 
 ```
@@ -55,3 +73,8 @@ docker rm $(docker ps -a -q)
 ```
 docker rmi <image id/name>
 ```
+
+## docker 快捷键
+
+* [ctrl + D]:这样会结束docker当前线程，容器结束。
+* [ctrl + P]/[ctrl + Q]退出而不终止容器运行。
