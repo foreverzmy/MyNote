@@ -11,6 +11,7 @@
   * [HTML](前端基础/HTML/README.md)
   * [CSS](前端基础/CSS/README.md)
   * [JavaScript](前端基础/JavaScript/README.md)
+    * [正则表达式](前端基础/JavaScript/正则表达式.md)
 
 * [前端进阶](前端进阶/README.md)
   * [SASS & SCSS](前端进阶/sass&scss/README.md)
