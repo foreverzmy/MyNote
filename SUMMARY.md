@@ -42,6 +42,11 @@
     * [多文件入口](前端进阶/Webpack/多文件入口.md)
     * [Bable](前端进阶/Webpack/Babel.md)
     * [CSS-loader](前端进阶/Webpack/CSS-loader.md)
+    * [CSS Module](前端进阶/Webpack/CSS Module.md)
+    * [Image loader](前端进阶/Webpack/Image loader.md)
+    * [UglifyJs](前端进阶/Webpack/UglifyJs.md)
+    * [HTML & Browser](前端进阶/Webpack/HTML & Browser.md)
+    * [](前端进阶/Webpack/.md)
     * [](前端进阶/Webpack/.md)
 
 * [NodeJS](NodeJS/README.md)
