@@ -35,44 +35,6 @@ module.exports = webpackConfig;
 
 webpack 还有很丰富的插件支持，使 webpack 的功能更加强大。
 
-### babel
-
-`babel` 是用来转译 js 的工具，使用 babel 可以将高版本的 js 转译到低版本的 js 。
-
-* 安装
-
-```npm
-npm i babel-loader babel-core babel-preset-es2015 babel-preset-react --save
-```
-
-* 使用
-
-```js
-// webpack.config.js
-const webpackConfig = {
-  //1.入口
-  entry : './src/index.js',        //入口文件
-  //2.输出
-  output : {
-    path: './dist',             //输出路径
-    filename : 'bundle.js',     //输出文件名
-  },
-  //3.加载器
-  module: {                          
-    rules: [
-    //3.1 编译es6
-    {
-      test: /\.(js|jsx)$/,        //文件后缀、类型      
-      exclude: /node_modules/,    //排除这个目录的文件
-      loader: 'babel-loader',     //使用的加载器
-      options: {
-        presets: ['react', "es2015"], //插件
-      },
-    }]
-  }
-};
-module.exports = webpackConfig;
-```
 
 ## 打包 CSS 文件
 
