@@ -104,12 +104,14 @@ module: {
 
 ```js
 const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const outpath = 'build';
 
@@ -203,6 +205,14 @@ module.exports = {
       threshold: 10240,
       minRatio: 0.8
     }),
+    // 删除打包文件夹
+    new CleanWebpackPlugin(['dist', 'build', ], 　 //匹配删除的文件
+      {
+        root: __dirname, //根目录
+        verbose: true, //开启在控制台输出信息
+        dry: false, //启用删除文件
+      }
+    ),
     // 开发状态自动启动浏览器
     new OpenBrowserPlugin({
       url: 'http://localhost:8080'
