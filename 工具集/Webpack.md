@@ -99,3 +99,126 @@ module: {
 ```
 
 会发现webpack自动添加了js文件的引入。
+
+一份配置文件
+
+```js
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+
+const outpath = 'build';
+
+module.exports = {
+  entry: './src/app.js',
+
+  output: {
+    path: path.resolve(__dirname, outpath),
+    filename: 'bundle.[chunkhash].js'
+  },
+  module: {
+    rules: [{
+      test: /\.scss?$/,
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: ['css-loader', 'sass-loader']
+      })
+      // ['style-loader', 'css-loader', 'sass-loader']
+    }, {
+      test: /\.js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      }
+    }, ]
+  },
+  // 新引入
+  plugins: [
+    // Scope Hoisting
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    // Code Splitting
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.[chunkhash].js',
+      minChunks(module) {
+        return module.context &&
+          module.context.indexOf('node_modules') >= 0;
+      }
+    }),
+    // 自动创建 index.html 并压缩
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      excludeChunks: ['base'],
+      filename: 'index.html',
+      minify: {
+        collapseWhitespace: true,
+        collapseInlineTagWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true
+      }
+    }),
+    // 使用标识符压缩
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        screw_ie8: true,
+        conditionals: true,
+        unused: true,
+        comparisons: true,
+        sequences: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true
+      },
+      output: {
+        comments: false
+      }
+    }),
+    new webpack.HashedModuleIdsPlugin(),
+    // React 生产版本
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    // 内联 css 文件
+    new ExtractTextPlugin({
+      filename: '[name].[contenthash].css',
+      allChunks: true
+    }),
+    new StyleExtHtmlWebpackPlugin({
+      minify: true
+    }),
+    // Gzip压缩
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
+      threshold: 10240,
+      minRatio: 0.8
+    }),
+    // 开发状态自动启动浏览器
+    new OpenBrowserPlugin({
+      url: 'http://localhost:8080'
+    }),
+  ],
+  devServer: {
+    //webpack-dev-server
+    historyApiFallback: true,
+    inline: true, // auto refresh
+    port: 8080,
+    proxy: {
+      '/uptoken/*': {
+        target: 'http://localhost:9000',
+        secure: false
+      }
+    }
+  },
+};
+```
