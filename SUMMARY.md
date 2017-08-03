@@ -68,6 +68,18 @@
   * [修改](MongoDB/修改.md)
   * [删除](MongoDB/删除.md)
 
+* [WebAssembly](WebAssaembly/README.md)
+  * [Methods](WebAssaembly/Methods/README.md)
+    * [WebAssembly.compile()](WebAssaembly/Methods/compile.md)
+    * [WebAssembly.instantiate()](WebAssaembly/Methods/instantiate.md)
+    * [WebAssembly.validate()](WebAssaembly/Methods/validate.md)
+  * [Constructors](WebAssaembly/Constructors/README.md)
+    * [WebAssembly.Module](WebAssaembly/Constructors/Module.md)
+    * [WebAssembly.Instance](WebAssaembly/Constructors/Instance.md)
+    * [WebAssembly.Memory](WebAssaembly/Constructors/Memory.md)
+    * [WebAssembly.Table](WebAssaembly/Constructors/Table.md)
+    * [WebAssembly.*Error](WebAssaembly/Constructors/Error.md)
+
 * [Angular](Angular/README.md)
   * [Angular-CLI](Angular/Angular-CLI.md)
   * [简单解析](Angular/简单解析.md)
