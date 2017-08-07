@@ -47,7 +47,7 @@
 
   `module`：要实例化的 `WebAssembly.Module` 对象。
 
-  `importObjec`：包含要导入到新创建的实例中的值的对象，例如函数或 `WebAssembly.Memory` 对象。每个声明的模块导入必须有一个匹配的属性，否则会抛出一个 `WebAssembly.LinkError`。
+  `importObjec` (可选)：包含要导入到新创建的实例中的值的对象，例如函数或 `WebAssembly.Memory` 对象。每个声明的模块导入必须有一个匹配的属性，否则会抛出一个 `WebAssembly.LinkError`。
 
 * 返回值：
   resolve 一个 `WebAssembly.Instance` 对象的 Promis。
