@@ -2,9 +2,9 @@
 
 该函数是用于编译和实例化 WebAssembly 代码的主要API。 此功能有两个重载：
 
-    主要重载采用 WebAssembly 二进制代码，以类型化的数组或 ArrayBuffer 的形式，并在一个步骤中同时执行编译和实例化。resolve 的 Promise 为编译的 `WebAssembly.Module` 及其第一个 `WebAssembly.Instance`。
+1. 主要重载采用 WebAssembly 二进制代码，以类型化的数组或 ArrayBuffer 的形式，并在一个步骤中同时执行编译和实例化。resolve 的 Promise 为编译的 `WebAssembly.Module` 及其第一个 `WebAssembly.Instance`。
 
-    次要重载采用已编译的 `WebAssembly.Module`，并 resolve 一个解析为该模块的实例的 Promise。 如果模块已经从高速缓存中进行了编译或检索，这个重载是很有用的。
+2. 次要重载采用已编译的 `WebAssembly.Module`，并 resolve 一个解析为该模块的实例的 Promise。 如果模块已经从高速缓存中进行了编译或检索，这个重载是很有用的。
 
 
 ## 主要重载 - 采用二进制代码
@@ -23,11 +23,11 @@
 
 * 返回值
 
-  resolve 一个包含以下两个字段的 ResultObject 的 Promise.
+  `resolve`：一个包含以下两个字段的 ResultObject 的 Promise.
 
-  module：表示编译的 WebAssembly 模块的 `WebAssembly.Module` 对象。 此模块可以再次实例化，通过 `postMessage()` 或在IndexedDB中缓存 共享。
+  `module`：表示编译的 WebAssembly 模块的 `WebAssembly.Module` 对象。 此模块可以再次实例化，通过 `postMessage()` 或在IndexedDB中缓存 共享。
 
-  instance：包含所有导出的 WebAssembly 函数的 `WebAssembly.Instance` 对象。
+  `instance`：包含所有导出的 WebAssembly 函数的 `WebAssembly.Instance` 对象。
 
 * 注意：
 
