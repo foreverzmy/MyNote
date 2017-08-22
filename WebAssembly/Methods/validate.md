@@ -2,7 +2,7 @@
 
 该函数验证给定的 WebAssembly 二进制数组，返回字节是否形成了有效的 wasm 模块：`true/false`。
 
-* 用法：
+## 用法：
 
   ```js
   WebAssembly.validate(bufferSource);
@@ -19,3 +19,15 @@
 * 注意：
 
   如果 bufferSource 不是类型化的数组或 ArrayBuffer，则抛出 TypeError。
+
+## 例子
+
+```ts
+import * as fs from 'fs';
+
+const path = './addOne.wasm';
+const buffer = fs.readFileSync(path);
+
+const valid = WebAssembly.validate(buffer);
+console.log(valid); // >true
+```

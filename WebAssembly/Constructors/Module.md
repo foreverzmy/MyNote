@@ -8,7 +8,7 @@
 
 由于大型模块的编译可能开销很大，因此开发人员在同步编译时绝对需要使用 `Module()` 构造函数; 所有其他时候都应该使用异步的 `WebAssembly.compile()` 方法。
 
-* 用法：
+## 用法
 
 ```ts
 const myModule = new WebAssembly.Module(bufferSource);

@@ -50,6 +50,7 @@
   `importObjec` (可选)：包含要导入到新创建的实例中的值的对象，例如函数或 `WebAssembly.Memory` 对象。每个声明的模块导入必须有一个匹配的属性，否则会抛出一个 `WebAssembly.LinkError`。
 
 * 返回值：
+
   resolve 一个 `WebAssembly.Instance` 对象的 Promis。
 
 * 注意：
@@ -64,7 +65,34 @@
 
 ## 例子
 
-二次重载：
+### 主要重载
+
+```ts
+import * as fs from 'fs';
+
+const path = './addOne.wasm';
+const buffer = fs.readFileSync(path);
+
+const importObject = {
+  env: {
+    addOne: function (arg) {
+      return arg + 1;
+    }
+  }
+};
+
+WebAssembly.instantiate(buffer, importObject)
+  .then((mod: any) => {
+    const result = mod.instance.exports.add(4, 5);
+    console.log(result);
+  })
+```
+
+结果会输出 10。在 C 中定义了 `add` 函数执行 js 中的 `addOne` 函数，同时传入了 js 传过来的两个数字相加，执行结果就是两个数字相加后再加1。
+
+这种是直接在 `WebAssembly.instantiate` 中传入 wasm 的二进制代码，会直接生成 `WebAssembly.instance` 类型的实例化对象。下面的二次重在例子和这个例子结果一样。
+
+### 二次重载：
 
 ```ts
 import * as fs from 'fs';
@@ -107,4 +135,4 @@ int add(int a, int b) {
 }
 ```
 
-结果会输出 10。在 C 中定义了 `add` 函数执行 js 中的 `addOne` 函数，同时传入了 js 传过来的两个数字相加，执行结果就是两个数字相加后再加1。
+这个例子和上面的主要重载一样，结果会输出 10。但是在 `WebAssembly.instantiate` 中传入的是一个 `WebAssembly.Module` 对象，而不是 wasm 的二进制代码，返回值也略有不同。
