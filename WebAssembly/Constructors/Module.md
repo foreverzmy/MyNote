@@ -49,3 +49,45 @@ const myModule = new WebAssembly.Module(bufferSource);
 ### 实例方法
 
 Module 实例没有自己的默认方法。
+
+## 例子
+
+```ts
+// main.ts
+import * as fs from 'fs';
+
+const path = './addOne.wasm';
+const buffer = fs.readFileSync(path);
+
+const mod = new WebAssembly.Module(buffer);
+
+WebAssembly.Module.exports(mod); // ->[{ name: 'memory', kind: 'memory' }, { name: 'add', kind: 'function' }]
+const imp = WebAssembly.Module.imports(mod); // ->[ { module: 'env', name: 'addOne', kind: 'function' } ]
+const cus = WebAssembly.Module.customSections(mod, 'name'); // ->[]
+
+const importObject = {
+  env: {
+    addOne: function (arg) {
+      return arg + 1;
+    }
+  }
+};
+
+WebAssembly.instantiate(mod, importObject)
+  .then((instance: any) => {
+    const result = instance.exports.add(4, 5);
+    console.log(result); // >10
+  });
+```
+
+编译为 wasm 的 c 文件如下：
+
+```c
+// addOne.c
+extern int addOne(int);
+int add(int a, int b) {
+  return addOne(a + b);
+}
+```
+
+`WebAssembly.Module()` 构造函数同步编译 WebAssembly 二进制代码。返回值可以通过 `WebAssembly.instantiate` 来实例化。

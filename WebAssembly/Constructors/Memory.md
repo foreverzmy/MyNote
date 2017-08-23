@@ -16,9 +16,9 @@ const myMemory = new WebAssembly.Memory(memoryDescriptor);
 
     memoryDescriptor：可以包含以下成员的对象：
 
-        1. initial：WebAssembly 内存的初始大小，以 WebAssembly 页为单位。
+        1. initial：WebAssembly 内存的初始大小，以 WebAssembly pages 为单位。
         
-        2. maximum (可选)： maximum 允许以 WebAssembly pages 为单位设置 WebAssembly 内存的大小增长。 当存在时，maximum 参数充当引擎的提示，以预留内存。然而，引擎可能会忽略或夹住此预留请求。通常，大多数 WebAssembly 模块不需要设置最大值。
+        2. maximum (可选)： maximum 允许以 WebAssembly pages 为单位设置 WebAssembly 内存的大小增长。 当存在时，maximum 参数充当引擎的提示，以预留内存。然而，引擎可能会忽略或锁住此预留请求。通常，大多数 WebAssembly 模块不需要设置最大值。
       
     * Note：WebAssembly pages 具有 65,536 字节的固定大小，即 64 KiB。
 
