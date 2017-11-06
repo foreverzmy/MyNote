@@ -1,12 +1,12 @@
-# WebAssembly.validate()
+# WebAssembly.validate\(\)
 
 该函数验证给定的 WebAssembly 二进制数组，返回字节是否形成了有效的 wasm 模块：`true/false`。
 
 ## 用法：
 
-  ```js
+```js
   WebAssembly.validate(bufferSource);
-  ```
+```
 
 * 参数：
 
@@ -31,3 +31,8 @@ const buffer = fs.readFileSync(path);
 const valid = WebAssembly.validate(buffer);
 console.log(valid); // >true
 ```
+
+
+
+
+
